@@ -25,12 +25,18 @@ const roleContent = {
   },
 };
 
+const CREDENTIALS = {
+  user: { email: "student@kiit.ac.in", password: "pass123" },
+  vendor: { email: "vendor@kiitvendor.ac.in", password: "pass123" },
+  admin: { email: "admin@kiitadmin.ac.in", password: "pass123" }
+};
+
 export default function Login() {
   const [role, setRole] = useState("user");
   const [isSignup, setIsSignup] = useState(false);
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("student@kiit.ac.in");
+  const [password, setPassword] = useState("pass123");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -40,6 +46,14 @@ export default function Login() {
   const navigate = useNavigate();
 
   const current = roleContent[role];
+
+  const handleRoleChange = (selectedRole) => {
+    setRole(selectedRole);
+    if (!isSignup) {
+      setEmail(CREDENTIALS[selectedRole].email);
+      setPassword(CREDENTIALS[selectedRole].password);
+    }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -125,9 +139,9 @@ export default function Login() {
                     type="button"
                     key={item}
                     className={`role-tab ${role === item ? "active" : ""}`}
-                    onClick={() => setRole(item)}
+                    onClick={() => handleRoleChange(item)}
                   >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                    {item === "user" ? "Student" : item.charAt(0).toUpperCase() + item.slice(1)}
                   </button>
                 ))}
               </div>
