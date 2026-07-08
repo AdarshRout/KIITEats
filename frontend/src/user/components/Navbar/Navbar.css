@@ -1,0 +1,263 @@
+/* ═══════════════════════════════════════════════════
+   User Navbar — Secondary navigation within user module
+   ═══════════════════════════════════════════════════ */
+
+.navbar {
+  padding: 14px 20px;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.navbar-inner {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-scroll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-scroll.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-scroll-left { left: 8px; }
+.nav-scroll-right { right: 8px; }
+
+/* ── Brand ────────────────────────────────────── */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navbar .logo {
+  width: 44px;
+  border-radius: 10px;
+}
+
+.navbar-brand h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.navbar-brand p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ── Menu ─────────────────────────────────────── */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 6px;
+  font-size: 0.92rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.navbar-menu a {
+  color: var(--muted);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-menu .active,
+.navbar-menu a:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ── Right side ───────────────────────────────── */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+  min-width: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.toggle-chip,
+.icon-pill,
+.signin-btn,
+.logout-btn {
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.toggle-chip.active {
+  background: rgba(22, 163, 74, 0.10);
+  border-color: rgba(22, 163, 74, 0.25);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.icon-pill {
+  padding: 10px 14px;
+}
+
+.icon-pill.with-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-pill.with-label span {
+  font-size: 0.85rem;
+}
+
+.signin-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: transparent;
+  color: white;
+  min-width: 100px;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.logout-btn {
+  background: var(--danger-soft);
+  border-color: var(--danger-border);
+  color: var(--danger);
+  min-width: 100px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.toggle-chip:hover,
+.icon-pill:hover,
+.signin-btn:hover,
+.logout-btn:hover,
+.navbar-search-icon:hover {
+  transform: translateY(-1px);
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.14);
+}
+
+/* ── Cart icon ────────────────────────────────── */
+
+.navbar-search-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  padding: 0 6px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ── Responsive ───────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .navbar-menu {
+    width: 100%;
+    justify-content: center;
+    border-radius: var(--radius);
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .toggle-chip span,
+  .icon-pill.with-label span {
+    display: none;
+  }
+
+  .signin-btn,
+  .logout-btn {
+    min-width: auto;
+    padding: 8px 12px;
+  }
+}

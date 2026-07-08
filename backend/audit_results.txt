@@ -1,0 +1,175 @@
+--- START ---
+NAME: Chicken Biryani | IMG: 
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&q=80
+NAME: Margherita Pizza | IMG: https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80
+NAME: Veg Burger | IMG: https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80
+NAME: Masala Dosa | IMG: https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&q=80
+NAME: Hakka Noodles | IMG: https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&q=80
+NAME: Cold Coffee | IMG: https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80
+NAME: Paneer Butter Masala | IMG: https://images.unsplash.com/photo-1631452180519-c014fe946bc0?w=500&q=80
+NAME: Momos (Veg) | IMG: https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?w=500&q=80
+NAME: Chicken Biryani | IMG: 
+NAME: Caesar Salad Bowl | IMG: /food/caesar_salad.png
+NAME: Greek Salad | IMG: /food/greek_salad.png
+NAME: Quinoa Power Bowl | IMG: /food/quinoa_power_bowl.png
+NAME: Fruit Salad Bowl | IMG: 
+NAME: Chicken Kathi Roll | IMG: 
+NAME: Paneer Tikka Roll | IMG: 
+NAME: Egg Double Roll | IMG: 
+NAME: Mutton Seekh Roll | IMG: 
+NAME: Gulab Jamun | IMG: 
+NAME: Chocolate Brownie | IMG: 
+NAME: Rasgulla | IMG: 
+NAME: Mango Kulfi | IMG: 
+NAME: Club Sandwich | IMG: 
+NAME: Veg Grilled Sandwich | IMG: 
+NAME: Paneer Bhurji Sandwich | IMG: 
+NAME: Chicken Tikka Sandwich | IMG: 
+NAME: Red Velvet Slice | IMG: 
+NAME: Dutch Truffle Pastry | IMG: 
+NAME: Blueberry Cheesecake | IMG: 
+NAME: Vanilla Cupcake | IMG: 
+NAME: Mini Thali | IMG: 
+NAME: Paneer Butter Masala Thali | IMG: 
+NAME: South Indian Combo | IMG: 
+NAME: Chole Bhature | IMG: 
+NAME: Penne Arrabiata | IMG: 
+NAME: Alfredo Pasta | IMG: 
+NAME: Mac & Cheese | IMG: 
+NAME: Aglio Olio | IMG: 
+NAME: Hakka Noodles | IMG: 
+NAME: Schezwan Noodles | IMG: 
+NAME: Chicken Chow Mein | IMG: 
+NAME: Thai Basil Noodles | IMG: 
+NAME: Caesar Salad Bowl | IMG: 
+NAME: Greek Salad | IMG: 
+NAME: Quinoa Power Bowl | IMG: 
+NAME: Fruit Salad Bowl | IMG: 
+NAME: Chicken Kathi Roll | IMG: 
+NAME: Paneer Tikka Roll | IMG: 
+NAME: Egg Double Roll | IMG: 
+NAME: Mutton Seekh Roll | IMG: 
+NAME: Gulab Jamun | IMG: 
+NAME: Chocolate Brownie | IMG: 
+NAME: Rasgulla | IMG: 
+NAME: Mango Kulfi | IMG: 
+NAME: Club Sandwich | IMG: 
+NAME: Veg Grilled Sandwich | IMG: 
+NAME: Paneer Bhurji Sandwich | IMG: 
+NAME: Chicken Tikka Sandwich | IMG: 
+NAME: Red Velvet Slice | IMG: 
+NAME: Dutch Truffle Pastry | IMG: 
+NAME: Blueberry Cheesecake | IMG: 
+NAME: Vanilla Cupcake | IMG: 
+NAME: Mini Thali | IMG: 
+NAME: Paneer Butter Masala Thali | IMG: 
+NAME: South Indian Combo | IMG: 
+NAME: Chole Bhature | IMG: 
+NAME: Penne Arrabiata | IMG: 
+NAME: Alfredo Pasta | IMG: 
+NAME: Mac & Cheese | IMG: 
+NAME: Aglio Olio | IMG: 
+NAME: Hakka Noodles | IMG: 
+NAME: Schezwan Noodles | IMG: 
+NAME: Chicken Chow Mein | IMG: 
+NAME: Thai Basil Noodles | IMG: 
+NAME: Chicken Biryani | IMG: 
+NAME: chicken biryani | IMG: 
+NAME: chicken biryani | IMG: 
+NAME: Caesar Salad Bowl | IMG: 
+NAME: Greek Salad | IMG: 
+NAME: Quinoa Power Bowl | IMG: 
+NAME: Fruit Salad Bowl | IMG: 
+NAME: Chicken Kathi Roll | IMG: 
+NAME: Paneer Tikka Roll | IMG: 
+NAME: Egg Double Roll | IMG: 
+NAME: Mutton Seekh Roll | IMG: 
+NAME: Gulab Jamun | IMG: 
+NAME: Chocolate Brownie | IMG: 
+NAME: Rasgulla | IMG: 
+NAME: Mango Kulfi | IMG: 
+NAME: Club Sandwich | IMG: 
+NAME: Veg Grilled Sandwich | IMG: 
+NAME: Paneer Bhurji Sandwich | IMG: 
+NAME: Chicken Tikka Sandwich | IMG: 
+NAME: Red Velvet Slice | IMG: 
+NAME: Dutch Truffle Pastry | IMG: 
+NAME: Blueberry Cheesecake | IMG: 
+NAME: Vanilla Cupcake | IMG: 
+NAME: Mini Thali | IMG: 
+NAME: Paneer Butter Masala Thali | IMG: 
+NAME: South Indian Combo | IMG: 
+NAME: Chole Bhature | IMG: 
+NAME: Penne Arrabiata | IMG: 
+NAME: Alfredo Pasta | IMG: 
+NAME: Mac & Cheese | IMG: 
+NAME: Aglio Olio | IMG: 
+NAME: Hakka Noodles | IMG: 
+NAME: Schezwan Noodles | IMG: 
+NAME: Chicken Chow Mein | IMG: 
+NAME: Thai Basil Noodles | IMG: 
+--- END ---

@@ -1,0 +1,36 @@
+# ── KiitEats Backend Dependencies ──
+
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# MongoDB async driver
+motor==3.6.0
+
+# Settings & validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+email-validator==2.1.1
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+bcrypt==4.0.1
+
+# QR Code generation
+qrcode==8.0
+Pillow==11.1.0
+
+# AI / ML
+scikit-learn==1.6.1
+textblob==0.18.0.post0
+
+# HTTP client (for webhook testing)
+httpx==0.28.1
+
+# AWS S3
+boto3==1.35.0
+
+# WebSocket support (used by uvicorn[standard] but explicit)
+websockets==14.1
