@@ -50,8 +50,6 @@ pinned: false
 - **Analytics**: `scikit-learn` & `TextBlob` for sentiment analysis.
 - **Real-time**: FastAPI WebSockets & `broadcast` manager.
 
-### Infrastructure & Services
-- **Image Storage**: [AWS S3](https://aws.amazon.com/s3/) (For food images & QR codes)
 - **Verification**: [Google Apps Script](https://www.google.com/script/start/) (Bridging UPI SMS/Emails to the backend for automatic UTR verification)
 
 ---
@@ -90,7 +88,6 @@ pinned: false
 - Python 3.10+
 - Node.js 18+
 - MongoDB Atlas Account
-- AWS S3 Bucket (Optional for dev, required for images)
 
 ### 1. Backend Setup
 ```bash
@@ -105,9 +102,6 @@ pip install -r requirements.txt
 MONGO_URI=your_mongodb_atlas_uri
 DB_NAME=your_db_name_from_mongo
 JWT_SECRET=your_super_secret_key
-AWS_ACCESS_KEY_ID=...
-AWS_SECRET_ACCESS_KEY=...
-AWS_S3_BUCKET_NAME=...
 ```
 
 **Run Backend**:

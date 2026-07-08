@@ -29,8 +29,5 @@ textblob==0.18.0.post0
 # HTTP client (for webhook testing)
 httpx==0.28.1
 
-# AWS S3
-boto3==1.35.0
-
 # WebSocket support (used by uvicorn[standard] but explicit)
 websockets==14.1

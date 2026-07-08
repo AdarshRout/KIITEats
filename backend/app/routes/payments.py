@@ -420,7 +420,7 @@ async def get_payment_qr(
     db: AsyncIOMotorDatabase = Depends(get_database),
     current_user: dict = Depends(get_current_user),
 ):
-    """Get the vendor's UPI QR code for a specific order."""
+    """Get payment details for a specific order including the static QR code."""
     if not ObjectId.is_valid(order_id):
         raise HTTPException(status_code=400, detail="Invalid order ID")
 
@@ -431,28 +431,11 @@ async def get_payment_qr(
     if order["payment_status"] == "paid":
         return {"message": "Already paid", "token_number": order.get("token_number")}
 
-    # Look up the vendor's QR image from S3
-    vendor = await db.vendors.find_one({"_id": ObjectId(order["vendor_id"])})
-    qr_image_url = vendor.get("qr_image_url", "") if vendor else ""
-    upi_id = vendor.get("upi_id", "") if vendor else ""
-
-    # If vendor has an uploaded QR, return the direct S3 URL
-    if qr_image_url:
-        return {
-            "order_id": order_id,
-            "qr_image_url": qr_image_url,
-            "upi_id": upi_id,
-            "amount": order["total_amount"],
-        }
-
-    # Fallback: generate dynamic QR code (base64)
-    from app.utils.qr_generator import generate_upi_qr
-    qr = generate_upi_qr(amount=order["total_amount"], order_id=order_id)
+    # Return static QR image — served from frontend public directory
     return {
         "order_id": order_id,
-        "qr_code": qr,
-        "qr_image_url": "",
-        "upi_id": upi_id,
+        "qr_image_url": "/qr.jpeg",
         "amount": order["total_amount"],
     }
+
 

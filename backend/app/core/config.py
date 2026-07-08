@@ -22,11 +22,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "KiitEats"
     DEBUG: bool = True
 
-    # AWS S3
-    AWS_ACCESS_KEY_ID: str = "REMOVED_FROM_HISTORY"
-    AWS_SECRET_ACCESS_KEY: str = "REMOVED_FROM_HISTORY"
-    AWS_DEFAULT_REGION: str = "ap-south-1"
-    AWS_S3_BUCKET_NAME: str = "kiiteats-8th-sem"
+
 
     model_config = {
         "env_file": ".env",

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File
+from fastapi import APIRouter, Depends, HTTPException, status
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from bson import ObjectId
 from typing import List
@@ -7,7 +7,6 @@ from app.core.database import get_database
 from app.core.security import get_current_user, require_roles
 from app.schemas.food_schema import VendorCreate, VendorResponse
 from app.models.vendor import vendor_document, COLLECTION_NAME
-from app.utils.s3_upload import upload_file_to_s3
 
 router = APIRouter(prefix="/vendors", tags=["Vendors"])
 
@@ -158,37 +157,4 @@ async def delete_vendor(
         raise HTTPException(status_code=404, detail="Vendor not found")
 
 
-@router.post("/upload-qr", response_model=VendorResponse)
-async def upload_vendor_qr(
-    file: UploadFile = File(...),
-    db: AsyncIOMotorDatabase = Depends(get_database),
-    current_user: dict = Depends(require_roles("vendor", "admin")),
-):
-    """
-    Upload a UPI QR code image to S3 and save the URL in the vendor profile.
-    Accepts multipart/form-data with a single 'file' field.
-    """
-    vendor = await db[COLLECTION_NAME].find_one({"owner_user_id": current_user["_id"]})
-    if not vendor:
-        raise HTTPException(status_code=404, detail="Vendor profile not found")
 
-    # Validate file type
-    allowed_types = {"image/png", "image/jpeg", "image/jpg", "image/webp"}
-    if file.content_type not in allowed_types:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Invalid file type '{file.content_type}'. Allowed: PNG, JPEG, WebP",
-        )
-
-    # Upload to S3
-    s3_url = await upload_file_to_s3(file, folder="vendor-qr")
-
-    # Update vendor document
-    await db[COLLECTION_NAME].update_one(
-        {"_id": vendor["_id"]},
-        {"$set": {"qr_image_url": s3_url}},
-    )
-
-    updated = await db[COLLECTION_NAME].find_one({"_id": vendor["_id"]})
-    updated["_id"] = str(updated["_id"])
-    return updated

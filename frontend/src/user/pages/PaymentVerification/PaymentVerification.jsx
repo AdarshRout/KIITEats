@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { PackageCheck, ArrowLeft, Loader, CheckCircle, Share2, ArrowRight, QrCode } from 'lucide-react';
+import { PackageCheck, ArrowLeft, Loader, CheckCircle, ArrowRight } from 'lucide-react';
 import api from '../../../vendor/apiClient';
 import './PaymentVerification.css';
 
@@ -10,8 +10,7 @@ const PaymentVerification = () => {
 
   // Step 1: QR Display  |  Step 2: UTR Submission
   const [step, setStep] = useState(1);
-  const [qrData, setQrData] = useState(null);
-  const [qrLoading, setQrLoading] = useState(true);
+  const [orderAmount, setOrderAmount] = useState(null);
 
   // UTR state
   const [utr, setUtr] = useState('');
@@ -22,38 +21,18 @@ const PaymentVerification = () => {
   // Validate exactly 12 digits
   const isValidUtr = /^\d{12}$/.test(utr);
 
-  // Fetch vendor QR on mount
+  // Fetch order amount on mount
   useEffect(() => {
-    const fetchQr = async () => {
+    const fetchOrderAmount = async () => {
       try {
         const data = await api.get(`/payments/qr/${orderId}`);
-        setQrData(data);
+        setOrderAmount(data.amount);
       } catch (err) {
-        console.error('Failed to fetch QR:', err);
-      } finally {
-        setQrLoading(false);
+        console.error('Failed to fetch order amount:', err);
       }
     };
-    fetchQr();
+    fetchOrderAmount();
   }, [orderId]);
-
-  // Open in UPI app via deep link directly
-  const handleOpenUpiApp = () => {
-    if (!qrData) return;
-    const upiId = qrData.upi_id || '';
-    const amount = qrData.amount || 0;
-    
-    triggerUpiDeepLink(upiId, amount);
-  };
-
-  const triggerUpiDeepLink = (upiId, amount) => {
-    if (!upiId) {
-      alert('Vendor UPI ID not configured. Please scan the QR code manually.');
-      return;
-    }
-    const upiUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=KiitEats&am=${amount}&tn=KiitEats Order ${orderId}&tr=${orderId}&cu=INR`;
-    window.location.href = upiUrl;
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -150,48 +129,26 @@ const PaymentVerification = () => {
             <span className="step">2</span>
           </div>
 
-          <h2 className="verify-title">Scan & Pay</h2>
+          <h2 className="verify-title">Scan &amp; Pay</h2>
           <p className="verify-desc">
-            Scan the vendor's QR code to make payment via your UPI app.
+            Scan the QR code below to make payment via your UPI app.
           </p>
 
-          {qrData && (
+          {orderAmount && (
             <div className="amount-badge">
-              ₹{qrData.amount}
+              ₹{orderAmount}
             </div>
           )}
 
           <div className="qr-display-wrapper">
-            {qrLoading ? (
-              <div className="qr-loading">
-                <Loader className="spin" size={32} />
-                <p>Loading QR code…</p>
-              </div>
-            ) : qrData?.qr_image_url ? (
-              <img
-                src={qrData.qr_image_url}
-                alt="Vendor UPI QR Code"
-                className="qr-image"
-              />
-            ) : qrData?.qr_code ? (
-              <img
-                src={qrData.qr_code}
-                alt="UPI QR Code"
-                className="qr-image"
-              />
-            ) : (
-              <div className="qr-error">
-                <QrCode size={48} />
-                <p>QR code not available</p>
-              </div>
-            )}
+            <img
+              src="/qr.jpeg"
+              alt="UPI QR Code"
+              className="qr-image"
+            />
           </div>
 
           <div className="qr-action-buttons">
-            <button className="primary-btn qr-action-btn" onClick={handleOpenUpiApp}>
-              <Share2 size={16} />
-              Open in UPI App
-            </button>
             <button className="secondary-btn qr-action-btn" onClick={() => setStep(2)}>
               <ArrowRight size={16} />
               I've Paid — Enter UTR
