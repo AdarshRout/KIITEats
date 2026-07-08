@@ -1,0 +1,25 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Environment (secrets go in HF Space settings)
+backend/.env
+.env
+
+# Git
+.git/
+.gitignore
+
+# Misc
+*.md
+*.txt
+doc.txt
+docx.txt
+payREADME.txt
+payment.txt

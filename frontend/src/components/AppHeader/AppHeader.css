@@ -1,0 +1,379 @@
+/* ═══════════════════════════════════════════════════
+   AppHeader — Shared top bar
+   ═══════════════════════════════════════════════════ */
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.app-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--header-height);
+}
+
+/* ── Brand ────────────────────────────────────── */
+
+.app-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.app-header-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+}
+
+.app-header-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.app-header-tagline {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Navigation ───────────────────────────────── */
+
+.app-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--surface-2);
+  padding: 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+}
+
+/* When centerNav (admin tabs) is used, strip the grey container */
+.app-header-nav.has-center-nav {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  justify-content: flex-start;
+}
+
+.app-header-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  margin-right: 4px;
+}
+
+button.app-header-link,
+button.app-header-mobile-link {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  width: auto;
+  text-align: left;
+  cursor: pointer;
+}
+button.app-header-mobile-link {
+  width: 100%;
+}
+
+.app-header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.app-header-link:hover {
+  background: rgba(22, 163, 74, 0.06);
+  color: var(--text-secondary);
+}
+
+.app-header-link.active {
+  background: white;
+  color: var(--primary);
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.app-header-link-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ── Right side ───────────────────────────────── */
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Module-specific action buttons ───────────── */
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.app-header-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.app-header-action-btn:hover {
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+.app-header-action-btn.active {
+  background: var(--primary-soft);
+  border-color: rgba(22, 163, 74, 0.25);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ── Cart button ──────────────────────────────── */
+
+.app-header-cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.app-header-cart:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.app-header-cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  padding: 0 5px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 800;
+  border: 2px solid white;
+}
+
+/* ── Theme toggle ────────────────────────────── */
+
+.app-header-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.app-header-theme-toggle:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+/* ── User greeting & logout ───────────────────── */
+
+.app-header-greeting {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+}
+
+.app-header-greeting strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.app-header-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.app-header-logout:hover {
+  background: rgba(239, 68, 68, 0.14);
+  color: #dc2626;
+}
+
+/* ── Mobile ───────────────────────────────────── */
+
+.app-header-mobile-toggle {
+  display: none;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.app-header-mobile-toggle:hover {
+  background: var(--surface-2);
+}
+
+.app-header-mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 12px 20px 20px;
+  border-top: 1px solid var(--border-light);
+  background: var(--surface);
+  gap: 4px;
+}
+
+.app-header-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+
+.app-header-mobile-link:hover,
+.app-header-mobile-link.active {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.app-header-mobile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.app-header-mobile-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--danger-soft);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ── Responsive ───────────────────────────────── */
+
+@media (max-width: 900px) {
+  .app-header-nav {
+    display: none;
+  }
+
+  .app-header-greeting {
+    display: none;
+  }
+
+  .app-header-logout {
+    display: none;
+  }
+
+  .app-header-actions .app-header-action-btn span {
+    display: none;
+  }
+
+  .app-header-mobile-toggle {
+    display: flex;
+  }
+
+  .app-header-mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header-actions {
+    gap: 4px;
+  }
+
+  .app-header-brand-text {
+    display: none;
+  }
+}

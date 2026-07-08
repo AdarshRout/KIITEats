@@ -1,0 +1,184 @@
+.map-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.map-modal-container {
+  background: var(--surface, #ffffff);
+  width: 100%;
+  max-width: 900px;
+  height: min(85vh, 700px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  animation: modalPopIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border-light, #e2e8f0);
+}
+
+.map-modal-header {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-light, #e2e8f0);
+  background: var(--surface, #ffffff);
+  gap: 16px;
+}
+
+.map-modal-title h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text, #0f172a);
+  margin: 0;
+}
+
+.map-modal-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.map-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.map-stat.walk {
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.map-stat.distance {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.map-stat.drive {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.map-stat.loading {
+  background: var(--surface-2, #f1f5f9);
+  color: var(--muted, #64748b);
+  animation: pulse 1.5s infinite;
+}
+
+.map-stat.denied {
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.map-retry-btn {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  padding: 0 4px;
+}
+
+.map-retry-btn:hover {
+  color: #1d4ed8;
+}
+
+.map-modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.map-modal-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.25);
+}
+
+.map-modal-open-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+}
+
+.map-modal-close {
+  background: var(--surface-2, #f1f5f9);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-secondary, #475569);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.map-modal-close:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.map-modal-body {
+  flex: 1;
+  position: relative;
+  background: #e2e8f0;
+}
+
+.leaflet-map-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Hide the default Leaflet routing panel if it somehow appears */
+.leaflet-routing-container {
+  display: none !important;
+}
+
+@keyframes modalPopIn {
+  0% { opacity: 0; transform: scale(0.92) translateY(30px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+[data-theme='dark'] .map-modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
