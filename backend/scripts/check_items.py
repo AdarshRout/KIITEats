@@ -1,8 +1,9 @@
 import asyncio
+import os
 from motor.motor_asyncio import AsyncIOMotorClient
 
 async def check():
-    uri = 'mongodb+srv://swagatpatel03_db_user:X45ONtgXEJQAx2w0@kiiteats.q3glutb.mongodb.net/?retryWrites=true&w=majority'
+    uri = os.getenv("MONGO_URI")
     client = AsyncIOMotorClient(uri)
     db = client['kiiteats']
     items = await db['food_items'].find({'name': {'$regex': 'Rasgulla|Mango Kulfi|Gulab'}}).to_list(10)

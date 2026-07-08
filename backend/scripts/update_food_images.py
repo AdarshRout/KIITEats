@@ -3,8 +3,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 
 async def update_food_images():
-    # Official Atlas URI from .env
-    uri = 'mongodb+srv://swagatpatel03_db_user:X45ONtgXEJQAx2w0@kiiteats.q3glutb.mongodb.net/?retryWrites=true&w=majority'
+    uri = os.getenv("MONGO_URI")
     client = AsyncIOMotorClient(uri)
     db = client['kiiteats']
     collection = db['food_items']
