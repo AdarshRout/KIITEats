@@ -4,12 +4,17 @@ frontend/node_modules/
 
 # Build output
 frontend/dist/
+frontend/build_output.txt
+frontend/vite.config.js.timestamp-*
 
 # Environment variables
+# backend/.env has real secrets — always ignored
 .env
 .env.local
 .env.*.local
 backend/.env
+# frontend/.env is safe to commit (empty VITE_API_URL placeholder for dev)
+!frontend/.env
 
 # Python
 __pycache__/

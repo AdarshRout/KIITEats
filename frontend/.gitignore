@@ -1,7 +1,11 @@
 node_modules/
-.env
 dist/
 build/
 coverage/
 *.log
 .DS_Store
+
+# .env is committed (empty VITE_API_URL dev placeholder — no secrets)
+# .env.local is ignored (personal overrides)
+.env.local
+.env.*.local

@@ -33,7 +33,6 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # Copy backend application code
 COPY --chown=user backend/app ./app
 COPY --chown=user backend/seed_data.py ./seed_data.py
-COPY --chown=user backend/seed_db.py ./seed_db.py
 
 # Copy built React frontend from Stage 1
 COPY --from=builder --chown=user /app/dist ./static

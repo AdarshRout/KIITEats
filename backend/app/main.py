@@ -30,20 +30,14 @@ app = FastAPI(
 )
 
 # ── CORS ─────────────────────────────────────────────────────────────────
-<<<<<<< HEAD
-# Comma-separated list of allowed frontend origins, e.g.
-# "https://kiiteats.vercel.app,http://localhost:5173"
+# Set CORS_ORIGINS in the backend .env as a comma-separated list, e.g.:
+# CORS_ORIGINS=https://kiiteats.vercel.app,http://localhost:5173
 _cors_origins_env = os.getenv("CORS_ORIGINS", "http://localhost:5173")
 _allowed_origins = [o.strip() for o in _cors_origins_env.split(",") if o.strip()]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_allowed_origins,
-=======
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
->>>>>>> 3ff3728d0e174cf11dd8c603c037ab223198c36e
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -100,9 +94,4 @@ if os.path.isdir(_static_dir):
         if rest_of_path and os.path.isfile(file_path):
             return FileResponse(file_path)
         # Otherwise serve index.html (React Router handles routing)
-<<<<<<< HEAD
         return FileResponse(os.path.join(_static_dir, "index.html"))
-=======
-        return FileResponse(os.path.join(_static_dir, "index.html"))
-
->>>>>>> 3ff3728d0e174cf11dd8c603c037ab223198c36e
